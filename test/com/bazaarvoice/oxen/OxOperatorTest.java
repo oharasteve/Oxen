@@ -1,20 +1,20 @@
 package com.bazaarvoice.oxen;
 
+/**
+ * Created by steve.ohara
+ * Date: 9/21/12 11:48 AM
+ */
+
 import com.bazaarvoice.oxen.expressions.OxFunctions;
 import com.bazaarvoice.oxen.expressions.OxOperator;
 import com.bazaarvoice.oxen.expressions.OxOperators;
 import com.bazaarvoice.oxen.symbols.OxLongSymbol;
-import junit.framework.Assert;
+import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import java.util.Locale;
-
-/**
- * Created by steve.ohara
- * Date: 9/21/12 11:48 AM
- */
 
 public class OxOperatorTest {
     private final Locale _locale = Locale.getDefault();
@@ -44,6 +44,6 @@ public class OxOperatorTest {
     @Test (dataProvider = "testOperatorData")
     private void testOperator(final OxOperator op) {
         boolean ok = op.testOperator(_symbolTable, _constants, _functions, _operators);
-        Assert.assertTrue("Operator " + op.toString() + " test failed.", ok);
+        Assert.assertTrue(ok, "Operator " + op.toString() + " test failed.");
     }
 }

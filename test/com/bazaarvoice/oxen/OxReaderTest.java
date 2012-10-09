@@ -10,7 +10,7 @@ import com.bazaarvoice.oxen.commands.OxProgram;
 import com.bazaarvoice.oxen.data.OxDirectReader;
 import com.bazaarvoice.oxen.data.OxReader;
 import com.bazaarvoice.oxen.data.OxXmlReader;
-import junit.framework.Assert;
+import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 

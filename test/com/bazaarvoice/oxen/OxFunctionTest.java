@@ -9,7 +9,7 @@ import com.bazaarvoice.oxen.expressions.OxFunction;
 import com.bazaarvoice.oxen.expressions.OxFunctions;
 import com.bazaarvoice.oxen.expressions.OxOperators;
 import com.bazaarvoice.oxen.symbols.OxLongSymbol;
-import junit.framework.Assert;
+import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -44,6 +44,6 @@ public class OxFunctionTest {
     @Test (dataProvider = "testFunctionData")
     private void testFunction(final OxFunction fn) {
         boolean ok = fn.testFunction(_symbolTable, _constants, _functions, _operators);
-        Assert.assertTrue("Function " + fn.toString() + " test failed.", ok);
+        Assert.assertTrue(ok, "Function " + fn.toString() + " test failed.");
     }
 }
